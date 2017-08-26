@@ -1,0 +1,32 @@
+
+<img [src] ="foto"/>
+
+<h1 (click) ="ola()">{{title}}</h1>
+
+<p>{{nomeDeleta}}</p>
+<h2>Lista Pessoas</h2>
+
+<ul>
+  <li *ngFor="let pessoa of pessoas">
+    {{pessoa}}
+  </li>
+</ul>
+
+<label for="nome">Digite seu nome: </label>
+<input class="nome" type="text"	[(ngModel)]="nome">
+
+<p>{{nome}}</p>
+
+<hr />
+
+<label for="nomes">Digite seu nome: </label>
+<input class="nomes" type="text"	[(ngModel)]="nomeDeleta">
+
+<p>{{nomeDeleta}}</p>
+
+
+<button (click) ="gravaService()">Enviar</button>
+<button (click) ="removeService()">Excluir</button>
+<ul>
+  <li *ngFor ="let nome of listaService.nomePessoas">{{nome}}</li>
+</ul>
